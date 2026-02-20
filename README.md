@@ -1,5 +1,6 @@
 # engenharia-de-software-com-ia-aplicada
 
+Abaixo são as referências e links complementares às aulas, dividido por módulos e submodulos
 
 ## Modulo 01 - Fundamentos de IA e LLMs para Programadores
 
