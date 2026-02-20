@@ -76,7 +76,6 @@ Projeto em [exemplo02](./modulo01-fundamentos-de-ia-e-llms-para-programadores/de
 - https://docs.ultralytics.com/integrations/tfjs/
 - https://github.com/MattSurabian/DuckHunt-JS?tab=readme-ov-file
 - https://pixijs.com/
-
 - https://caniuse.com/?search=using
 - https://dev.to/zacharylee/explicit-resource-management-in-js-the-using-keyword-d9f
 
