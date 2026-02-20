@@ -15,7 +15,7 @@ Caminho feliz:
 
 > [!NOTE]
 >
-> - O **tensorflowjs** não possui suporte para o **Node.js** na versão **22**. Por isso, é necessário usar a versão **24**.
+> - O **tensorflowjs** não possui suporte para o **Node.js** na versão **22**. Por isso, é recomendado usar a versão **24**.
 
 - Baixe o instalador do **nvm** para **Windows**:
   - 📦 https://github.com/coreybutler/nvm-windows/releases/download/1.2.2/nvm-setup.exe
