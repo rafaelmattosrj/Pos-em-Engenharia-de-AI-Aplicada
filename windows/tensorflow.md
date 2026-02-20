@@ -8,6 +8,8 @@ Caminho feliz:
 
 ## Instalação do [**Node.js**](https://nodejs.org/) via [nvm](https://github.com/coreybutler/nvm-windows)
 
+Para usar o `@tensorflow/tfjs-node` sem o **WSL** no **Windows**, é necessário configurar o ambiente antes de continuar.
+
 > [!IMPORTANT]
 >
 > - Se já tiver o **Node.js** na versão **24**, você pode pular essa etapa.
