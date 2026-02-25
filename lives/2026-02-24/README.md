@@ -17,8 +17,8 @@ Live inaugural de aquecimento da **Pós-graduação em Engenharia de IA Aplicada
 
 ### 📘 Base Teórica
 
-- [Agent Skills — O Conhecimento Procedimental da IA](base-teorica/agent-skills-conhecimento-procedimental-da-ia.md)
 - [Model Context Protocol (MCP) — O Padrão de Conexão Universal para IA](base-teorica/mcp-model-context-protocol.md)
+- [Agent Skills — O Conhecimento Procedimental da IA](base-teorica/agent-skills-conhecimento-procedimental-da-ia.md)
 
 ### 🛠️ Ferramentas mencionadas
 
