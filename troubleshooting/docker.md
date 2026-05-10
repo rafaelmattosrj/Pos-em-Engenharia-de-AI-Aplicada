@@ -23,15 +23,15 @@ Basta trocar o hífen por espaço nos scripts e comandos, por exemplo:
 
 Exemplos afetados:
 
-- [exemplo-12-embeddings-neo4j-template/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/)
-- [exemplo-12-embeddings-neo4j/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/)
-- [exemplo-13-embeddings-neo4j-rag/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/)
-- [04-song-highlights-template/](../modulo02-integracao-apis-llms/04-song-highlights-template/)
-- [04-song-highlights-z/](../modulo02-integracao-apis-llms/04-song-highlights-z/)
-- [07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/)
-- [07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/)
-- [08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/)
-- [09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/)
+- [modulo02-integracao-apis-llms/04-song-highlights-template/](../modulo02-integracao-apis-llms/04-song-highlights-template/)
+- [modulo02-integracao-apis-llms/04-song-highlights-z/](../modulo02-integracao-apis-llms/04-song-highlights-z/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/)
 
 ---
 
@@ -53,16 +53,16 @@ Basta remover a linha para resolver o ruído, por exemplo:
 
 Exemplos afetados:
 
-- [exemplo-12-embeddings-neo4j-template/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/)
-- [exemplo-12-embeddings-neo4j/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/)
-- [exemplo-13-embeddings-neo4j-rag/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/)
-- [04-song-highlights-template/](../modulo02-integracao-apis-llms/04-song-highlights-template/)
-- [04-song-highlights-z/](../modulo02-integracao-apis-llms/04-song-highlights-z/)
-- [06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
-- [07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/)
-- [07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/)
-- [08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/)
-- [09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/)
+- [modulo02-integracao-apis-llms/04-song-highlights-template/](../modulo02-integracao-apis-llms/04-song-highlights-template/)
+- [modulo02-integracao-apis-llms/04-song-highlights-z/](../modulo02-integracao-apis-llms/04-song-highlights-z/)
+- [modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/](../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/)
 
 ---
 

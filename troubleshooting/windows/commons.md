@@ -34,14 +34,14 @@ Em algumas distribuições do **Windows** ou em certos processadores, os binári
 
 Exemplos afetados:
 
-- [exemplo-00-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/) (`@tensorflow/tfjs-node`)
-- [exemplo-00-z/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/) (`@tensorflow/tfjs-node`)
-- [exemplo-08-context7/nextjs-better-auth-demo/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-08-context7/nextjs-better-auth-demo/) (`better-sqlite3`)
-- [exemplo-12-embeddings-neo4j-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/) (`@huggingface/transformers`, `@xenova/transformers`)
-- [exemplo-12-embeddings-neo4j/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/) (`@huggingface/transformers`, `@xenova/transformers`)
-- [exemplo-13-embeddings-neo4j-rag/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/) (`@huggingface/transformers`, `@xenova/transformers`)
-- [04-song-highlights-template/](../../modulo02-integracao-apis-llms/04-song-highlights-template/) (`better-sqlite3`, `@huggingface/transformers`, `@xenova/transformers`)
-- [04-song-highlights-z/](../../modulo02-integracao-apis-llms/04-song-highlights-z/) (`better-sqlite3`, `@huggingface/transformers`, `@xenova/transformers`)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/) (`@tensorflow/tfjs-node`)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/) (`@tensorflow/tfjs-node`)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-08-context7/nextjs-better-auth-demo/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-08-context7/nextjs-better-auth-demo/) (`better-sqlite3`)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j-template/) (`@huggingface/transformers`, `@xenova/transformers`)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-12-embeddings-neo4j/) (`@huggingface/transformers`, `@xenova/transformers`)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/) (`@huggingface/transformers`, `@xenova/transformers`)
+- [modulo02-integracao-apis-llms/04-song-highlights-template/](../../modulo02-integracao-apis-llms/04-song-highlights-template/) (`better-sqlite3`, `@huggingface/transformers`, `@xenova/transformers`)
+- [modulo02-integracao-apis-llms/04-song-highlights-z/](../../modulo02-integracao-apis-llms/04-song-highlights-z/) (`better-sqlite3`, `@huggingface/transformers`, `@xenova/transformers`)
 
 ---
 
@@ -70,13 +70,13 @@ npm install --save-dev cross-env
 
 Exemplos afetados:
 
-- [exemplo-09-grafana-mcp/alumnus/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/)
-- [exemplo-09-grafana-mcp/alumnus/\_alumnus/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/_alumnus/)
-- [06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
-- [07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/)
-- [07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/)
-- [08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/)
-- [09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/\_alumnus/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/_alumnus/)
+- [modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/)
+- [modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/)
 
 ---
 
@@ -102,14 +102,14 @@ Para resolver, use aspas duplas com escape (`\"`), por exemplo:
 
 Exemplos afetados:
 
-- [exemplo-01-ecommerce-recomendations-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-template/)
-- [exemplo-01-ecommerce-recomendations-z/parte01-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte01-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-01-ecommerce-recomendations-z/parte02-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte02-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-01-ecommerce-recomendations-z/parte03-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte03-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-01-ecommerce-recomendations-z/parte04-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte04-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/)
-- [05-safeguard-prompt-injection-template/](../../modulo02-integracao-apis-llms/05-safeguard-prompt-injection-template/)
-- [05-safeguard-prompt-injection-z/](../../modulo02-integracao-apis-llms/05-safeguard-prompt-injection-z/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-template/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte01-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte01-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte02-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte02-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte03-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte03-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte04-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte04-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/)
+- [modulo02-integracao-apis-llms/05-safeguard-prompt-injection-template/](../../modulo02-integracao-apis-llms/05-safeguard-prompt-injection-template/)
+- [modulo02-integracao-apis-llms/05-safeguard-prompt-injection-z/](../../modulo02-integracao-apis-llms/05-safeguard-prompt-injection-z/)
 
 ---
 
@@ -145,19 +145,19 @@ npm install --save-dev shx
 
 Diretórios afetados pelo `rm -rf`:
 
-- [exemplo-09-grafana-mcp/alumnus/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/)
-- [06-rag-neo4j-students-template/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-template/)
-- [06-rag-neo4j-students-z/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-z/)
-- [01-multiple-mcp-tools-template/](../../modulo03-mcp-na-pratica/01-multiple-mcp-tools-template/)
-- [01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/01-multiple-mcp-tools-z/)
-- [06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
-- [09-using-mcp-with-langchain/01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/01-multiple-mcp-tools-z/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/)
+- [modulo02-integracao-apis-llms/06-rag-neo4j-students-template/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-template/)
+- [modulo02-integracao-apis-llms/06-rag-neo4j-students-z/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-z/)
+- [modulo03-mcp-na-pratica/01-multiple-mcp-tools-template/](../../modulo03-mcp-na-pratica/01-multiple-mcp-tools-template/)
+- [modulo03-mcp-na-pratica/01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/01-multiple-mcp-tools-z/)
+- [modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
+- [modulo03-mcp-na-pratica/09-using-mcp-with-langchain/01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/01-multiple-mcp-tools-z/)
 
 Diretórios afetados pelo `chmod`:
 
-- [07-api-security-auth-rate-limiting-template/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/customers-mcp-z/)
-- [07-api-security-auth-rate-limiting-z/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/customers-mcp-z/)
-- [08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/customers-mcp-z/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/customers-mcp-z/)
+- [modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
 
 ---
 
@@ -197,23 +197,23 @@ npm install --save-dev glob
 
 Exemplos afetados:
 
-- [01-smart-model-router-gateway/](../../modulo02-integracao-apis-llms/01-smart-model-router-gateway/)
-- [02-langchain-intro/](../../modulo02-integracao-apis-llms/02-langchain-intro/)
-- [03-medical-appointment-template/](../../modulo02-integracao-apis-llms/03-medical-appointment-template/)
-- [03-medical-appointment-z/](../../modulo02-integracao-apis-llms/03-medical-appointment-z/)
-- [04-song-highlights-template/](../../modulo02-integracao-apis-llms/04-song-highlights-template/)
-- [04-song-highlights-z/](../../modulo02-integracao-apis-llms/04-song-highlights-z/)
-- [06-rag-neo4j-students-template/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-template/)
-- [06-rag-neo4j-students-z/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-z/)
-- [07-doc-analysis/](../../modulo02-integracao-apis-llms/07-doc-analysis/)
-- [02-google-trends-agent/](../../modulo03-mcp-na-pratica/02-google-trends-agent/)
-- [05-mcps-do-zero-template/](../../modulo03-mcp-na-pratica/05-mcps-do-zero-template/)
-- [05-mcps-do-zero-z/](../../modulo03-mcp-na-pratica/05-mcps-do-zero-z/)
-- [06-your-legacy-api-as-mcp/customers-mcp-template/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/customers-mcp-template/)
-- [06-your-legacy-api-as-mcp/customers-mcp-z/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/customers-mcp-z/)
-- [07-api-security-auth-rate-limiting-template/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/customers-mcp-z/)
-- [07-api-security-auth-rate-limiting-z/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/customers-mcp-z/)
-- [08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
+- [modulo02-integracao-apis-llms/01-smart-model-router-gateway/](../../modulo02-integracao-apis-llms/01-smart-model-router-gateway/)
+- [modulo02-integracao-apis-llms/02-langchain-intro/](../../modulo02-integracao-apis-llms/02-langchain-intro/)
+- [modulo02-integracao-apis-llms/03-medical-appointment-template/](../../modulo02-integracao-apis-llms/03-medical-appointment-template/)
+- [modulo02-integracao-apis-llms/03-medical-appointment-z/](../../modulo02-integracao-apis-llms/03-medical-appointment-z/)
+- [modulo02-integracao-apis-llms/04-song-highlights-template/](../../modulo02-integracao-apis-llms/04-song-highlights-template/)
+- [modulo02-integracao-apis-llms/04-song-highlights-z/](../../modulo02-integracao-apis-llms/04-song-highlights-z/)
+- [modulo02-integracao-apis-llms/06-rag-neo4j-students-template/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-template/)
+- [modulo02-integracao-apis-llms/06-rag-neo4j-students-z/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-z/)
+- [modulo02-integracao-apis-llms/07-doc-analysis/](../../modulo02-integracao-apis-llms/07-doc-analysis/)
+- [modulo03-mcp-na-pratica/02-google-trends-agent/](../../modulo03-mcp-na-pratica/02-google-trends-agent/)
+- [modulo03-mcp-na-pratica/05-mcps-do-zero-template/](../../modulo03-mcp-na-pratica/05-mcps-do-zero-template/)
+- [modulo03-mcp-na-pratica/05-mcps-do-zero-z/](../../modulo03-mcp-na-pratica/05-mcps-do-zero-z/)
+- [modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/customers-mcp-template/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/customers-mcp-template/)
+- [modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/customers-mcp-z/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/customers-mcp-z/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/customers-mcp-z/)
+- [modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/customers-mcp-z/)
+- [modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
 
 ---
 
@@ -243,25 +243,25 @@ $PSVersionTable.PSVersion
 
 Exemplos afetados:
 
-- [exemplo-00-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/)
-- [exemplo-00-z/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/)
-- [exemplo-01-ecommerce-recomendations-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-template/)
-- [exemplo-01-ecommerce-recomendations-z/parte01-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte01-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-01-ecommerce-recomendations-z/parte02-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte02-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-01-ecommerce-recomendations-z/parte03-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte03-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-01-ecommerce-recomendations-z/parte04-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte04-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/)
-- [exemplo-02-vencendo-qualquer-jogo/\_template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/_template/)
-- [exemplo-02-vencendo-qualquer-jogo/DuckHunt-JS-parte01/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/DuckHunt-JS-parte01/)
-- [exemplo-02-vencendo-qualquer-jogo/DuckHunt-JS-parte02/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/DuckHunt-JS-parte02/)
-- [exemplo-09-grafana-mcp/alumnus/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/)
-- [06-rag-neo4j-students-template/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-template/)
-- [06-rag-neo4j-students-z/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-z/)
-- [01-multiple-mcp-tools-template/](../../modulo03-mcp-na-pratica/01-multiple-mcp-tools-template/)
-- [01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/01-multiple-mcp-tools-z/)
-- [06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
-- [08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
-- [09-using-mcp-with-langchain/01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/01-multiple-mcp-tools-z/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-z/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-template/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte01-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte01-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte02-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte02-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte03-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte03-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte04-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte04-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/\_template/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/_template/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/DuckHunt-JS-parte01/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/DuckHunt-JS-parte01/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/DuckHunt-JS-parte02/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-02-vencendo-qualquer-jogo/DuckHunt-JS-parte02/)
+- [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-09-grafana-mcp/alumnus/)
+- [modulo02-integracao-apis-llms/06-rag-neo4j-students-template/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-template/)
+- [modulo02-integracao-apis-llms/06-rag-neo4j-students-z/](../../modulo02-integracao-apis-llms/06-rag-neo4j-students-z/)
+- [modulo03-mcp-na-pratica/01-multiple-mcp-tools-template/](../../modulo03-mcp-na-pratica/01-multiple-mcp-tools-template/)
+- [modulo03-mcp-na-pratica/01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/01-multiple-mcp-tools-z/)
+- [modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
+- [modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
+- [modulo03-mcp-na-pratica/09-using-mcp-with-langchain/01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/01-multiple-mcp-tools-z/)
 
 ---
 
