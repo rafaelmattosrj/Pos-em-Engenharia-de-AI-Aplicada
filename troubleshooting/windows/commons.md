@@ -4,7 +4,7 @@ Este documento reúne padrões de scripts `npm` e dependências do material do c
 
 ## Dependências nativas (binários)
 
-Ao instalar pacotes que compilam binários nativos, por exemplo: `@tensorflow/tfjs-node`, `better-sqlite3`, `@huggingface/transformers` ou `@xenova/transformers`, o `npm install` falha sem o ambiente de compilação **C++** configurado no **Windows**.
+Ao instalar pacotes que compilam binários nativos, por exemplo: `@tensorflow/tfjs-node`, `better-sqlite3`, `@huggingface/transformers` ou `@xenova/transformers`, o `npm i`/`npm ci` falha sem o ambiente de compilação **C++** configurado no **Windows**.
 
 Para resolver, instale o conjunto mínimo de ferramentas antes do `npm i`/`npm ci`, por exemplo:
 
@@ -12,8 +12,10 @@ Para resolver, instale o conjunto mínimo de ferramentas antes do `npm i`/`npm c
 
 ```powershell
 winget install --id Microsoft.VisualStudio.2022.BuildTools
-winget install --id Python.Python.3.12
+winget install --id Python.Python.3.14
 winget install --id Microsoft.VCRedist.2015+.x64
+# winget install --id Microsoft.VCRedist.2015+.x86
+# winget install --id Microsoft.VCRedist.2015+.arm64
 ```
 
 Caso ainda haja falha, troque `@tensorflow/tfjs-node` por `@tensorflow/tfjs` (puro **JavaScript**). A performance é menor, mas o pacote não exige toolchain nativa.
@@ -32,6 +34,8 @@ Exemplos afetados:
 - [exemplo-13-embeddings-neo4j-rag/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/) (`@huggingface/transformers`, `@xenova/transformers`)
 - [04-song-highlights-template/](../../modulo02-integracao-apis-llms/04-song-highlights-template/) (`better-sqlite3`, `@huggingface/transformers`, `@xenova/transformers`)
 - [04-song-highlights-z/](../../modulo02-integracao-apis-llms/04-song-highlights-z/) (`better-sqlite3`, `@huggingface/transformers`, `@xenova/transformers`)
+
+---
 
 ## Variáveis de ambiente em linha (`NODE_ENV=`, `DB_NAME=`)
 
@@ -66,6 +70,8 @@ Exemplos afetados:
 - [08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/nodejs-fastify-mongodb-crud-z/)
 - [09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/](../../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/nodejs-fastify-mongodb-crud-z/)
 
+---
+
 ## Aspas simples em argumentos
 
 Ao usar aspas simples em argumentos, por exemplo: `--message 'What is the version?'`, o **Windows** repassa o valor com as aspas embutidas ou quebra o conteúdo em vários argumentos.
@@ -96,6 +102,8 @@ Exemplos afetados:
 - [exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/](../../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-01-ecommerce-recomendations-z/parte05-ecommerce-recomendations-with-tensorflow/)
 - [05-safeguard-prompt-injection-template/](../../modulo02-integracao-apis-llms/05-safeguard-prompt-injection-template/)
 - [05-safeguard-prompt-injection-z/](../../modulo02-integracao-apis-llms/05-safeguard-prompt-injection-z/)
+
+---
 
 ## Comandos Unix (`rm -rf`, `chmod`)
 
@@ -142,6 +150,8 @@ Diretórios afetados pelo `chmod`:
 - [07-api-security-auth-rate-limiting-template/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-template/customers-mcp-z/)
 - [07-api-security-auth-rate-limiting-z/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/customers-mcp-z/)
 - [08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
+
+---
 
 ## Glob `tests/**/*.test.ts`
 
@@ -197,6 +207,8 @@ Exemplos afetados:
 - [07-api-security-auth-rate-limiting-z/customers-mcp-z/](../../modulo03-mcp-na-pratica/07-api-security-auth-rate-limiting-z/customers-mcp-z/)
 - [08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
 
+---
+
 ## Operador `&&` no PowerShell 5.1
 
 Ao usar o operador `&&` em comandos, por exemplo: `cd dir && node ...`, o **PowerShell 5.1** (padrão do **Windows 10** e **11**) falha com `ParserError: The token '&&' is not a valid statement separator in this version`.
@@ -242,6 +254,8 @@ Exemplos afetados:
 - [06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/](../../modulo03-mcp-na-pratica/06-your-legacy-api-as-mcp/nodejs-fastify-mongodb-crud/)
 - [08-publishing-mcps-private-npm/customers-mcp-z/](../../modulo03-mcp-na-pratica/08-publishing-mcps-private-npm/customers-mcp-z/)
 - [09-using-mcp-with-langchain/01-multiple-mcp-tools-z/](../../modulo03-mcp-na-pratica/09-using-mcp-with-langchain/01-multiple-mcp-tools-z/)
+
+---
 
 ## Resumo
 
