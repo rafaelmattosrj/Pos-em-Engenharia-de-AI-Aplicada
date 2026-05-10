@@ -286,4 +286,3 @@ Projeto em [exemplo-13-embeddings-neo4j-rag/](./modulo01-fundamentos-de-ia-e-llm
 - [Problemas comuns com **Docker**](./troubleshooting/docker.md)
 - [Problemas comuns no **Windows**](./troubleshooting/windows/commons.md)
   - [Configurar **WSL**](./troubleshooting/windows/wsl.md)
-  - [Falha ao instalar o `@tensorflow/tfjs-node`](./troubleshooting/windows/tensorflow.md)

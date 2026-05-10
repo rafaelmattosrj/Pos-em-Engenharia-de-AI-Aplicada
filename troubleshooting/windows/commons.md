@@ -1,5 +1,11 @@
 # Problemas comuns no Windows
 
+> [!IMPORTANT]
+>
+> Para uma experiência mais fiel às aulas usando **Windows**, a recomendação oficial é usar o **WSL**.
+>
+> - [Configurando o **WSL** pela primeira vez](./wsl.md).
+
 Este documento reúne padrões de scripts `npm` e dependências do material do curso que falham no **Windows** nativo (sem **WSL** nem **Git Bash**). Cada caso traz uma solução portátil entre os sistemas operacionais.
 
 ## Dependências nativas (binários)
@@ -18,11 +24,13 @@ winget install --id Microsoft.VCRedist.2015+.x64
 # winget install --id Microsoft.VCRedist.2015+.arm64
 ```
 
-Caso ainda haja falha, troque `@tensorflow/tfjs-node` por `@tensorflow/tfjs` (puro **JavaScript**). A performance é menor, mas o pacote não exige toolchain nativa.
-
-> [!TIP]
+> [!IMPORTANT]
 >
-> Para o **TensorFlow.js** especificamente, há um guia detalhado em [tensorflow.md](./tensorflow.md).
+> O `@tensorflow/tfjs-node` não tem suporte para **Node.js 22** no **Windows**. Use **Node.js 24** quando o pacote for usado nos exemplos.
+>
+> - **Node.js v22 para v24**: https://nodejs.org/en/blog/migrations/v22-to-v24
+
+Em algumas distribuições do **Windows** ou em certos processadores, os binários do `@tensorflow/tfjs-node` podem não estar disponíveis mesmo com o ambiente de compilação configurado. Nesse caso, troque o pacote por `@tensorflow/tfjs` (puro **JavaScript**, voltado para navegadores). A performance é menor e algumas operações de ponto flutuante podem divergir, mas o pacote não exige toolchain nativa.
 
 Exemplos afetados:
 
