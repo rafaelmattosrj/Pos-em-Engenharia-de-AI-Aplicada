@@ -1,10 +1,13 @@
 # Suporte para TensorFlow.js no Windows
 
-Caminho feliz:
+> Caminho feliz:
 
 - Use **WSL**, até a próxima 🐧✨
+- [Veja como configurar o **WSL** pela primeira vez para atender os requisitos dos módulos](./wsl.md).
 
 ---
+
+> Usando diretamente com **Windows** _(experimental)_:
 
 ## Instalação do [**Node.js**](https://nodejs.org/) via [nvm](https://github.com/coreybutler/nvm-windows)
 
@@ -67,3 +70,5 @@ yarn -v
 ---
 
 Agora você pode usar o **TensorFlow.js** (`@tensorflow/tfjs-node`) normalmente 🤟
+
+- Em algumas distribuições do **Windows** ou processadores, o `@tensorflow/tfjs-node` não pode não possuir os binários compatíveis. Nesse caso, a alternativa mais fácil é usar o `@tensorflow/tfj` que não depende de binários e funciona com **JavaScript** puro, mas sabendo que a performance é menor e que enquanto o `@tensorflow/tfjs-node` usa **C++**, o `@tensorflow/tfj` é voltado para uso em navegadores, podendo divergir em operaçõwes de ponto flutuante (_floats_).
