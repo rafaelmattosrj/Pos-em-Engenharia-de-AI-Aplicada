@@ -4,7 +4,7 @@ Este documento reúne ajustes nos arquivos `docker-compose` e nos scripts `npm` 
 
 ## Atributo `version:` deprecado
 
-Ao manter o atributo `version:` no topo do `docker-compose.yml`, o **Docker Compose v2** ignora o valor e exibe o aviso `the attribute 'version' is obsolete, it will be ignored, please remove it to avoid potential confusion`.
+Ao manter o atributo `version:` no topo do `docker-compose.yml`, o **Docker Compose v2** ignora exibe o erro `the attribute 'version' is obsolete, it will be ignored, please remove it to avoid potential confusion`.
 
 Basta remover a linha para resolver o ruído, por exemplo:
 
