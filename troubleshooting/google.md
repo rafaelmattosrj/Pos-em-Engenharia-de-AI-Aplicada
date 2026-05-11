@@ -1,4 +1,4 @@
-# Erros comuns no Chrome
+# Erros comuns no Google Chrome
 
 ## Prompt API for Gemini Nano (Web AI)
 
@@ -10,7 +10,7 @@ Erro:
 LanguageModel.params is not a function
 ```
 
-Os exemplos [exemplo-03-webai01](./exemplo-03-webai01), [exemplo-04-webai02-temperature-and-topK](./exemplo-04-webai02-temperature-and-topK) e [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-05-webai03-multimodal](./modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-05-webai03-multimodal) usam o método `LanguageModel.params()`, que foi [**descontinuado pela **Google** e desabilitado em novas instalações**](https://developer.chrome.com/origintrials/#/view_trial/4469259680211795969) e continuará disponível para usários com a instalação antiga até 5 de outubro de 2026.
+Os exemplos [exemplo-03-webai01](../exemplo-03-webai01), [exemplo-04-webai02-temperature-and-topK](../exemplo-04-webai02-temperature-and-topK) e [modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-05-webai03-multimodal](../modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-05-webai03-multimodal) usam o método `LanguageModel.params()`, que foi [**descontinuado pela **Google** e desabilitado em novas instalações**](https://developer.chrome.com/origintrials/#/view_trial/4469259680211795969) e continuará disponível para usários com a instalação antiga até 5 de outubro de 2026.
 
 Para corrigir, basta usar as configurações que já vêm por padrão ou personalizar manualmente, por exemplo:
 
