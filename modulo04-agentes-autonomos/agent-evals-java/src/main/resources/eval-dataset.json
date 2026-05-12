@@ -1,0 +1,32 @@
+[
+  {
+    "id": "deploy-latency-001",
+    "input": "Latência alta em payment-api após deploy das 14h",
+    "difficulty": "medium",
+    "expectedTools": ["getDeployHistory", "getMetrics", "getLogs"]
+  },
+  {
+    "id": "memory-leak-002",
+    "input": "Memory leak detectado no serviço de autenticação",
+    "difficulty": "hard",
+    "expectedTools": ["getMetrics", "getLogs", "saveIncident"]
+  },
+  {
+    "id": "database-slow-003",
+    "input": "Queries lentas no banco de dados de pedidos",
+    "difficulty": "easy",
+    "expectedTools": ["getMetrics", "getLogs"]
+  },
+  {
+    "id": "service-down-004",
+    "input": "Serviço de notificações retornando 503",
+    "difficulty": "medium",
+    "expectedTools": ["getLogs", "getDeployHistory", "saveIncident"]
+  },
+  {
+    "id": "cpu-spike-005",
+    "input": "Pico de CPU de 95% no worker de processamento de imagens",
+    "difficulty": "hard",
+    "expectedTools": ["getMetrics", "getLogs", "getDeployHistory"]
+  }
+]

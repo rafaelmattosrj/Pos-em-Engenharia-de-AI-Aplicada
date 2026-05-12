@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.iadeva.customer.CustomerApiTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.168 s -- in com.iadeva.customer.CustomerApiTest

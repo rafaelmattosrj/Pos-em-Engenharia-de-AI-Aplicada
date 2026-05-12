@@ -1,0 +1,11 @@
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/model/AuthRequest.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/controller/AuthController.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/service/CustomerService.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/controller/CustomerController.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/model/Customer.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/model/AuthResponse.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/security/JwtFilter.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/CustomerApplication.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/security/RateLimitFilter.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/service/AuthService.java
+/Users/rafael.mattos/Projects/Pos-em-Engenharia-de-AI-Aplicada/modulo03-mcp-na-pratica/legacy-customer-api-java/src/main/java/com/iadeva/customer/security/SecurityConfig.java
