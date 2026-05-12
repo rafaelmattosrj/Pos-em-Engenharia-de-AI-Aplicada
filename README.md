@@ -286,3 +286,28 @@ Projeto em [exemplo-13-embeddings-neo4j-rag/](./modulo01-fundamentos-de-ia-e-llm
 - [Problemas comuns com **Docker**](./troubleshooting/docker.md)
 - [Problemas comuns no **Windows**](./troubleshooting/windows/commons.md)
   - [Configurar **WSL**](./troubleshooting/windows/wsl.md)
+
+### Skills de Suporte
+
+#### Windowsfy
+
+Skill focada em adaptar os exercícios para **Windows** nativo de forma personalizada por aluno.
+
+**Instalação:**
+
+```sh
+npx -y skills add https://github.com/unipds-engenharia-de-ia-aplicada/engenharia-de-software-com-ia-aplicada --skill windowsfy
+```
+
+**Uso:**
+
+```
+/windowsfy ./
+/windowsfy modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template
+```
+
+```
+<Cole a mensagem de erro>
+
+/windowsfy <caminho do exemplo>
+```
