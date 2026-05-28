@@ -13,6 +13,7 @@
 
 ## 📚 Material
 
+- [Slide: Spec-Driven Development com Agentes de IA em Codebases Enterprise](./unipds-sdd-enterprise.pdf)
 - [Exemplos no estado inicial (antes da live)](./000-pre-live/)
 - [Exemplos no estado final (após a live)](./001-pos-live/)
 
