@@ -14,7 +14,7 @@
 ## 📚 Material
 
 - [Exemplos no estado inicial (antes da live)](./000-pre-live/)
-- [Exemplos no estado final (após a live)](./0001-pos-live/)
+- [Exemplos no estado final (após a live)](./001-pos-live/)
 
 ## Dica extra da Live
 
