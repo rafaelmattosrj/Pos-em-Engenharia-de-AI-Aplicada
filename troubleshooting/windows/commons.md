@@ -8,6 +8,18 @@
 
 Este documento reúne padrões de scripts `npm` e dependências do material do curso que falham no **Windows** nativo (sem **WSL** nem **Git Bash**). Cada caso traz uma solução portátil entre os sistemas operacionais.
 
+## nvm
+
+- https://github.com/coreybutler/nvm-windows/releases
+
+Dando permissão para o **npm**:
+
+> **PowerShell**
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ## Dependências nativas (binários)
 
 Ao instalar pacotes que compilam binários nativos, por exemplo: `@tensorflow/tfjs-node`, `better-sqlite3`, `@huggingface/transformers` ou `@xenova/transformers`, o `npm i`/`npm ci` falha sem o ambiente de compilação **C++** configurado no **Windows**.
