@@ -1,0 +1,11 @@
+Os melhores modelos para programação atualmente são:
+
+Composer 1 200k (29/10)
+Gemini 3 Pro 1M (18/11) $2
+GPT-5.2 Codex 400k (18/12) $1.75
+Sonnet 4.5 200k/1M (29/09) $3
+Opus 4.5 200k (24/11) $5/M tokens
+GLM 4.7 200k (22/12) oss $0,40/M tokens
+Kimi K2.5 262k (27/01) oss $0,57
+
+claude --dangerously-skip-permissions

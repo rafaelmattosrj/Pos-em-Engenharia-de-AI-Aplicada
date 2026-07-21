@@ -1,0 +1,36 @@
+I'm seeing 500 errors on the /students/db-leaky-connections endpoint for my application.
+Please investigate and provide a comprehensive report from the last 30 minutes including:
+
+Query Prometheus metrics:
+
+getting requests that ended as 500 for this endpoint
+Include response times for failure cases
+
+
+Query Loki logs:
+
+Correlate logs with the metrics found
+Show all error-level logs for this endpoint
+Extract complete error messages and stack traces
+Show the pattern of failed requests over time
+
+
+Query Tempo traces:
+
+Correlate traces with logs and metrics
+Get traces related to the failed requests
+Show the span hierarchy and operations
+Include any spans with exception details
+
+
+Root cause analysis:
+
+Based on error patterns, metrics, stack traces, and trace analysis
+Identify the exact file and line number causing the issue
+Explain what code is missing or incorrect
+Suggest the specific fix needed
+
+
+
+Provide the simple diagnosis table or report with the correlation between the telemetry data.
+I'm seeing 500 errors on the /students/db-leaky-connections endpoint for my application.

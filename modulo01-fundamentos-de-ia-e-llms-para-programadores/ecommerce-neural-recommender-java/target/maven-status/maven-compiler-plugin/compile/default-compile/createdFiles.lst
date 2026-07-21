@@ -1,0 +1,9 @@
+com\recomendacao\ml\RecommendationEngine$Recommendation.class
+com\recomendacao\model\User.class
+com\recomendacao\ml\RecommendationEngine$TrainingData.class
+com\recomendacao\ml\ModelContext.class
+com\recomendacao\model\Product.class
+com\recomendacao\ml\RecommendationEngine.class
+com\recomendacao\data\DataLoader.class
+com\recomendacao\ml\NeuralNetwork.class
+com\recomendacao\Main.class
