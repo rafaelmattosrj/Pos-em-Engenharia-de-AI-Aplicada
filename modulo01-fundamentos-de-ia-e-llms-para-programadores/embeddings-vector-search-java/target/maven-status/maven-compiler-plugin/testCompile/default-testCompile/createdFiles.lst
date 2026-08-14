@@ -1,0 +1,3 @@
+com\embeddings\EmbeddingModelTest.class
+com\embeddings\DocumentSplitterTest.class
+com\embeddings\util\TextPreviewTest.class

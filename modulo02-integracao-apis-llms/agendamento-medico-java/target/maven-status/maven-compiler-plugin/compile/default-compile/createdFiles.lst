@@ -1,0 +1,12 @@
+com\iadeva\agendamento\ChatController.class
+com\iadeva\agendamento\service\IntentService.class
+com\iadeva\agendamento\ChatController$ChatRequest.class
+com\iadeva\agendamento\model\Professional.class
+com\iadeva\agendamento\service\MessageGeneratorService.class
+com\iadeva\agendamento\AgendamentoApplication.class
+com\iadeva\agendamento\model\IntentResult.class
+com\iadeva\agendamento\ResilientChatClient.class
+com\iadeva\agendamento\service\AppointmentService.class
+com\iadeva\agendamento\ChatController$ChatResponse.class
+com\iadeva\agendamento\graph\AppointmentOrchestrator.class
+com\iadeva\agendamento\model\Appointment.class

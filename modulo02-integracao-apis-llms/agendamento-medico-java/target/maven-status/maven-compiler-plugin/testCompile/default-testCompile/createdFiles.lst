@@ -1,0 +1,6 @@
+com\iadeva\agendamento\ChatControllerTest.class
+com\iadeva\agendamento\service\AppointmentServiceTest.class
+com\iadeva\agendamento\service\MessageGeneratorServiceTest.class
+com\iadeva\agendamento\ResilientChatClientTest.class
+com\iadeva\agendamento\graph\AppointmentOrchestratorTest.class
+com\iadeva\agendamento\service\IntentServiceTest.class

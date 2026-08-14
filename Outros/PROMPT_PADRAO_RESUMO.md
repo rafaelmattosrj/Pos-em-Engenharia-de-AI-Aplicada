@@ -39,11 +39,10 @@ Para cada módulo, o resumo DEVE conter todas as seções abaixo:
   - Arquitetura da rede neural (se aplicável): camadas, neurônios, ativações, loss, otimizador
   - Dependências e como rodar
 
-### 4. Analogias Java/Spring Boot e Go
-- Para cada conceito novo, incluir pelo menos 1 analogia com o ecossistema Java/Spring Boot **e** o equivalente idiomático em Go (o aluno atua em backend nas duas linguagens — nunca trazer só uma)
-- Formato: tabela de 3 colunas — Conceito | Equivalente Java/Spring Boot | Equivalente Go
-- Exemplos: tf.tidy() ↔ try-with-resources ↔ defer; Web Worker ↔ @Async ↔ goroutine; EventListener ↔ ApplicationEventPublisher ↔ channel consumido por goroutine dedicada
-- Quando Go não tiver equivalente direto de um recurso Java (AOP, anotações, DI automática), explicitar isso e mostrar como o mesmo resultado é obtido de forma idiomática em Go (composição explícita, middleware, interfaces) — não forçar tradução artificial
+### 4. Analogias Java/Spring Boot
+- Para cada conceito novo, incluir pelo menos 1 analogia com o ecossistema Java/Spring Boot
+- Formato: pergunta que um dev backend Java teria → resposta com a analogia
+- Exemplos: tf.tidy() ↔ try-with-resources, Web Worker ↔ @Async, EventListener ↔ ApplicationEventPublisher
 
 ### 5. Escalabilidade e Produção
 - Como o conceito/projeto se aplica em ambiente real
@@ -94,7 +93,7 @@ Gerar o conteúdo em Markdown estruturado, que depois será convertido para .doc
 
 - [ ] Todos os capítulos do PDF foram cobertos?
 - [ ] Os projetos do relatório .md foram integrados com seus detalhes técnicos?
-- [ ] Há pelo menos 3 analogias Java/Spring Boot **e Go** por módulo (nunca só uma das duas linguagens)?
+- [ ] Há pelo menos 3 analogias Java/Spring Boot por módulo?
 - [ ] Tabelas de comparação estão presentes onde faz sentido?
 - [ ] Callouts com ícones estão sendo usados para destacar insights?
 - [ ] Seção de escalabilidade/produção existe?

@@ -1,0 +1,13 @@
+com\iadeva\evals\dataset\EvalDataset.class
+com\iadeva\evals\controller\EvalsController.class
+com\iadeva\evals\evaluator\BenchmarkRunner.class
+com\iadeva\evals\evaluator\ToolSelectionEvaluator.class
+com\iadeva\evals\model\BenchmarkReport.class
+com\iadeva\evals\model\BenchmarkMetrics.class
+com\iadeva\evals\model\EvalScenario.class
+com\iadeva\evals\model\ToolSelectionReport.class
+com\iadeva\evals\EvalsApplication.class
+com\iadeva\evals\model\ToolSelectionCase.class
+com\iadeva\evals\dataset\EvalDataset$1.class
+com\iadeva\evals\evaluator\MemoryEvaluator.class
+com\iadeva\evals\model\MemoryImpactReport.class

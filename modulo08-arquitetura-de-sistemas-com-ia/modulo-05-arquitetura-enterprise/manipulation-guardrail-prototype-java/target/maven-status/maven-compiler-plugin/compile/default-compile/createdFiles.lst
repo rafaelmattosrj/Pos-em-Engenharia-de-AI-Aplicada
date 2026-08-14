@@ -1,0 +1,6 @@
+com\trialforge\guardrail\ClassifierClient.class
+com\trialforge\guardrail\Main.class
+com\trialforge\guardrail\GuardrailGateway$ProcessResult.class
+com\trialforge\guardrail\GuardrailGateway.class
+com\trialforge\guardrail\OllamaClassifierClient.class
+com\trialforge\guardrail\GuardrailGateway$ClassificationResult.class

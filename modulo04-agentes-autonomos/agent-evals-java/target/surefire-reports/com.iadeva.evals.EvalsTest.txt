@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.iadeva.evals.EvalsTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.066 s -- in com.iadeva.evals.EvalsTest

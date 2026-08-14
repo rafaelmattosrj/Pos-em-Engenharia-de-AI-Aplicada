@@ -1,0 +1,10 @@
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\graph\nodes\ChatResponseNode.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\ChatController.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\graph\nodes\IdentifyIntentNode.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\graph\nodes\LowerCaseNode.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\graph\nodes\FallbackNode.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\graph\nodes\UpperCaseNode.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\graph\GraphState.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\graph\WorkflowOrchestrator.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\ResilientChatClient.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo02-integracao-apis-llms\roteamento-condicional-java\src\main\java\com\iadeva\roteamento\RoteamentoApplication.java

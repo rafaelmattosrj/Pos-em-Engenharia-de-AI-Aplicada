@@ -1,0 +1,11 @@
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\model\AuthRequest.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\service\AuthService.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\security\RateLimitFilter.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\model\AuthResponse.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\controller\CustomerController.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\service\CustomerService.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\controller\AuthController.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\security\JwtFilter.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\security\SecurityConfig.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\CustomerApplication.java
+C:\Projetos\engenharia-de-software-com-ia-aplicada\modulo03-mcp-na-pratica\legacy-customer-api-java\src\main\java\com\iadeva\customer\model\Customer.java

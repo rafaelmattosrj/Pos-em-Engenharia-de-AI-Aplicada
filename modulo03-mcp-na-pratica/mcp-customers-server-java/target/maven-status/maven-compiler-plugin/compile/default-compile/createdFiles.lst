@@ -1,0 +1,9 @@
+com\iadeva\mcp\config\McpConfig.class
+com\iadeva\mcp\tool\CustomerTools.class
+com\iadeva\mcp\prompt\CustomerPrompts.class
+com\iadeva\mcp\model\Customer.class
+com\iadeva\mcp\resource\ApiResource.class
+com\iadeva\mcp\client\CustomerHttpClient.class
+com\iadeva\mcp\McpServerApplication.class
+com\iadeva\mcp\model\MutationResult.class
+com\iadeva\mcp\service\CustomerService.class

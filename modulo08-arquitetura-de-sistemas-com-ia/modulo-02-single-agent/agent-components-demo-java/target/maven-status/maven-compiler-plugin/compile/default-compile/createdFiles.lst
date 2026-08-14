@@ -1,0 +1,14 @@
+com\trialforge\agentcomponents\ChatClient.class
+com\trialforge\agentcomponents\Memoria$Mensagem.class
+com\trialforge\agentcomponents\Memoria.class
+com\trialforge\agentcomponents\AcaoGate.class
+com\trialforge\agentcomponents\Main.class
+com\trialforge\agentcomponents\AcaoGate$ResultadoAcao.class
+com\trialforge\agentcomponents\Memoria$MemoriaLongoPrazo.class
+com\trialforge\agentcomponents\Planejamento.class
+com\trialforge\agentcomponents\Memoria$Historico.class
+com\trialforge\agentcomponents\Ferramentas.class
+com\trialforge\agentcomponents\OllamaChatClient.class
+com\trialforge\agentcomponents\Planejamento$ResultadoPlanejamento.class
+com\trialforge\agentcomponents\AcaoGate$AcaoProposta.class
+com\trialforge\agentcomponents\Ferramentas$ResultadoClausula.class

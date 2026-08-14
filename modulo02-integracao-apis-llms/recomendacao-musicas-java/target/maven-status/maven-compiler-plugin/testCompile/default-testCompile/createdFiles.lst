@@ -1,0 +1,8 @@
+com\iadeva\musicas\support\MockOpenAiServer$Response.class
+com\iadeva\musicas\ChatControllerTest.class
+com\iadeva\musicas\repository\ConversationRepositoryTest.class
+com\iadeva\musicas\graph\MusicChatOrchestratorTest.class
+com\iadeva\musicas\repository\PreferencesRepositoryTest.class
+com\iadeva\musicas\service\PreferencesServiceTest.class
+com\iadeva\musicas\support\MockOpenAiServer.class
+com\iadeva\musicas\service\MemoryServiceTest.class

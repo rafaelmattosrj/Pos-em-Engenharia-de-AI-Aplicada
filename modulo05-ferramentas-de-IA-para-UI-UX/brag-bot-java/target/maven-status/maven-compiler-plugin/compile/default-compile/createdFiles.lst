@@ -1,0 +1,6 @@
+com\iadeva\bragbot\gemini\GeminiClient.class
+com\iadeva\bragbot\BragBotApplication.class
+com\iadeva\bragbot\controller\BragController.class
+com\iadeva\bragbot\model\BragDocument.class
+com\iadeva\bragbot\model\BragRequest.class
+com\iadeva\bragbot\service\BragService.class

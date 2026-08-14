@@ -1,0 +1,10 @@
+com\iadeva\cfp\CfpPlatformApplication.class
+com\iadeva\cfp\controller\AppController.class
+com\iadeva\cfp\dto\CreateEventDto.class
+com\iadeva\cfp\dto\CreateSpeakerDto.class
+com\iadeva\cfp\service\SpeakerService.class
+com\iadeva\cfp\service\EventService.class
+com\iadeva\cfp\model\Event.class
+com\iadeva\cfp\model\Speaker.class
+com\iadeva\cfp\controller\SpeakerController.class
+com\iadeva\cfp\controller\EventController.class

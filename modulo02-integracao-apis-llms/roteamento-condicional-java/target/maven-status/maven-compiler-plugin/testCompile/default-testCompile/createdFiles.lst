@@ -1,0 +1,6 @@
+com\iadeva\roteamento\graph\nodes\FallbackNodeTest.class
+com\iadeva\roteamento\ChatControllerTest.class
+com\iadeva\roteamento\graph\nodes\IdentifyIntentNodeTest.class
+com\iadeva\roteamento\graph\nodes\UpperCaseNodeTest.class
+com\iadeva\roteamento\graph\WorkflowOrchestratorTest.class
+com\iadeva\roteamento\graph\nodes\LowerCaseNodeTest.class

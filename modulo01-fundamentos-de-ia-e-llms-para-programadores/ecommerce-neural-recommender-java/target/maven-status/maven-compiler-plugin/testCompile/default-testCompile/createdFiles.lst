@@ -1,0 +1,5 @@
+com\recomendacao\ml\RecommendationEngineTest.class
+com\recomendacao\model\ProductUserTest.class
+com\recomendacao\data\DataLoaderTest.class
+com\recomendacao\ml\ModelContextTest.class
+com\recomendacao\ml\NeuralNetworkTest.class

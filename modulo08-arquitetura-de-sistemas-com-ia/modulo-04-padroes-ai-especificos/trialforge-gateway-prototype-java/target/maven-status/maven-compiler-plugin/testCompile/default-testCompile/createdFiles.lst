@@ -1,0 +1,15 @@
+com\trialforge\gateway\FakeChatStreamer.class
+com\trialforge\gateway\ProcessorTest.class
+com\trialforge\gateway\ollama\OllamaClientTest.class
+com\trialforge\gateway\Bm25Test.class
+com\trialforge\gateway\FakeEmbedder.class
+com\trialforge\gateway\RagSearchTest.class
+com\trialforge\gateway\CosineSimilarityTest.class
+com\trialforge\gateway\TokenizerTest.class
+com\trialforge\gateway\AuditTrailTest.class
+com\trialforge\gateway\ApprovalGateTest.class
+com\trialforge\gateway\FakeApprover.class
+com\trialforge\gateway\IntentClassifierTest.class
+com\trialforge\gateway\AgenticRagTest.class
+com\trialforge\gateway\RankUtilsTest.class
+com\trialforge\gateway\SemanticCacheTest.class

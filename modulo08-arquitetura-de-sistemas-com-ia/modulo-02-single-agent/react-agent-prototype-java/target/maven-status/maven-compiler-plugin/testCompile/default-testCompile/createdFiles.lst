@@ -1,0 +1,7 @@
+com\trialforge\reactagent\RetryingChatClientTest.class
+com\trialforge\reactagent\FakeChatClient$Evento.class
+com\trialforge\reactagent\ExecutorFerramentaTest.class
+com\trialforge\reactagent\FakeChatClient$Evento$Falha.class
+com\trialforge\reactagent\FakeChatClient$Evento$Sucesso.class
+com\trialforge\reactagent\FakeChatClient.class
+com\trialforge\reactagent\AgenteICFTest.class

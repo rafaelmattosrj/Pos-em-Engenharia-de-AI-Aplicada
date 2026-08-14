@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.iadeva.guardrails.ChatControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.086 s -- in com.iadeva.guardrails.ChatControllerTest

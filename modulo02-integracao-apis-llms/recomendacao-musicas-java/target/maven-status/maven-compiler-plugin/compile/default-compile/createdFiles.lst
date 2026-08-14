@@ -1,0 +1,12 @@
+com\iadeva\musicas\ResilientChatClient.class
+com\iadeva\musicas\ChatController.class
+com\iadeva\musicas\repository\PreferencesRepository.class
+com\iadeva\musicas\service\MemoryService.class
+com\iadeva\musicas\model\UserPreferences.class
+com\iadeva\musicas\ChatController$ChatResponse.class
+com\iadeva\musicas\graph\MusicChatOrchestrator.class
+com\iadeva\musicas\repository\ConversationRepository.class
+com\iadeva\musicas\model\ConversationMessage.class
+com\iadeva\musicas\service\PreferencesService.class
+com\iadeva\musicas\ChatController$ChatRequest.class
+com\iadeva\musicas\RecomendacaoMusicasApplication.class
