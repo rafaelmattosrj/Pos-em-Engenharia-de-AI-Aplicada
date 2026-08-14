@@ -122,6 +122,30 @@ tarefas que normalmente requerem inteligencia humana...
 
 ---
 
+## Testes
+
+A logica de orquestracao (`ChatSession`) e de configuracao (`ChatConfig`) foi extraida de
+`Main.java` para classes isoladas e testadas com JUnit 5 + Mockito + AssertJ — sem depender
+de uma instancia real do Ollama, mesma abordagem usada no porte Go
+(`ollama-local-llm-chat-go/ollama/client_test.go`, testado com `httptest`).
+
+Cenarios cobertos (equivalentes ao pacote Go `ollama`):
+
+- resposta com sucesso;
+- falha em uma pergunta sem interromper as demais (recuperacao);
+- falha persistente registrada como erro (sem derrubar a aplicacao);
+- lista vazia de perguntas;
+- uma chamada ao `ChatModel` por pergunta.
+
+A retentativa de rede em si (`maxRetries`) e responsabilidade do `OpenAiChatModel` do
+LangChain4j, configurado em `Main.java`.
+
+```bash
+mvn test
+```
+
+---
+
 ## Dependencias
 
 | Dependencia | Versao | Uso |

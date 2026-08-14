@@ -5,11 +5,7 @@ import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.metrics.LongCounter;
 import io.opentelemetry.api.metrics.Meter;
-import io.opentelemetry.api.trace.Span;
-import io.opentelemetry.api.trace.SpanKind;
-import io.opentelemetry.api.trace.StatusCode;
 import io.opentelemetry.api.trace.Tracer;
-import io.opentelemetry.context.Scope;
 import io.opentelemetry.exporter.otlp.trace.OtlpGrpcSpanExporter;
 import io.opentelemetry.exporter.otlp.metrics.OtlpGrpcMetricExporter;
 import io.opentelemetry.sdk.OpenTelemetrySdk;
@@ -97,6 +93,8 @@ public class Main {
         int totalOrders = 5;
         LOG.info("Starting simulation – " + totalOrders + " checkout flows");
 
+        CheckoutSimulator simulator = new CheckoutSimulator(tracer, ordersPlacedCounter, RANDOM);
+
         for (int i = 1; i <= totalOrders; i++) {
             String orderId = "order-" + UUID.randomUUID().toString().substring(0, 8);
             String userId  = USERS[RANDOM.nextInt(USERS.length)];
@@ -107,8 +105,7 @@ public class Main {
             LOG.info(String.format("[%d/%d] Checkout | order=%s user=%s product=%s amount=%.2f qty=%d",
                     i, totalOrders, orderId, userId, product, amount, qty));
 
-            boolean success = simulateCheckout(tracer, ordersPlacedCounter,
-                    orderId, userId, product, amount, qty);
+            boolean success = simulator.simulateCheckout(orderId, userId, product, amount, qty);
 
             LOG.info(String.format("[%d/%d] Result: %s", i, totalOrders,
                     success ? "SUCCESS" : "FAILED"));
@@ -128,177 +125,6 @@ public class Main {
         sdk.getSdkMeterProvider().shutdown().join(10, TimeUnit.SECONDS);
 
         LOG.info("Done. Check Grafana at http://localhost:3000 to see your data.");
-    }
-
-    // ── Checkout root span ────────────────────────────────────────────────────
-
-    /**
-     * Simulates a full checkout: validates inventory, processes payment,
-     * and records the completed order.
-     *
-     * @return {@code true} if the checkout succeeded
-     */
-    private static boolean simulateCheckout(
-            Tracer tracer,
-            LongCounter ordersPlacedCounter,
-            String orderId,
-            String userId,
-            String product,
-            double amount,
-            int qty) throws InterruptedException {
-
-        // ROOT span: checkout
-        Span checkoutSpan = tracer.spanBuilder("checkout")
-                .setSpanKind(SpanKind.SERVER)
-                .setAttribute("user.id",    userId)
-                .setAttribute("order.id",   orderId)
-                .setAttribute("order.product", product)
-                .setAttribute("order.quantity", (long) qty)
-                .setAttribute("order.amount",   amount)
-                .setAttribute("order.currency", "USD")
-                .startSpan();
-
-        try (Scope checkoutScope = checkoutSpan.makeCurrent()) {
-
-            // CHILD span 1: inventory-check
-            boolean inStock = simulateInventoryCheck(tracer, product, qty);
-
-            if (!inStock) {
-                checkoutSpan.setStatus(StatusCode.ERROR, "Item out of stock");
-                checkoutSpan.setAttribute("checkout.outcome", "out_of_stock");
-                return false;
-            }
-
-            // CHILD span 2: payment
-            boolean paymentOk = simulatePayment(tracer, orderId, userId, amount);
-
-            if (!paymentOk) {
-                checkoutSpan.setStatus(StatusCode.ERROR, "Payment declined");
-                checkoutSpan.setAttribute("checkout.outcome", "payment_declined");
-                return false;
-            }
-
-            // All good – record the metric
-            checkoutSpan.setAttribute("checkout.outcome", "success");
-            checkoutSpan.setStatus(StatusCode.OK);
-
-            ordersPlacedCounter.add(1,
-                    Attributes.builder()
-                            .put("order.product", product)
-                            .put("order.currency", "USD")
-                            .build());
-
-            return true;
-
-        } catch (Exception ex) {
-            checkoutSpan.recordException(ex);
-            checkoutSpan.setStatus(StatusCode.ERROR, ex.getMessage());
-            return false;
-        } finally {
-            checkoutSpan.end();
-        }
-    }
-
-    // ── Inventory-check child span ─────────────────────────────────────────
-
-    /**
-     * Simulates a call to the inventory service.
-     * Randomly reports out-of-stock ~15 % of the time to exercise error paths.
-     */
-    private static boolean simulateInventoryCheck(
-            Tracer tracer,
-            String product,
-            int qty) throws InterruptedException {
-
-        Span span = tracer.spanBuilder("inventory-check")
-                .setSpanKind(SpanKind.CLIENT)
-                .setAttribute("inventory.product", product)
-                .setAttribute("inventory.requested_qty", (long) qty)
-                .startSpan();
-
-        try (Scope ignored = span.makeCurrent()) {
-            // Simulate network latency to the inventory service
-            TimeUnit.MILLISECONDS.sleep(50 + RANDOM.nextInt(150));
-
-            // 15 % chance the item is out of stock
-            boolean inStock = RANDOM.nextDouble() > 0.15;
-            int availableQty = inStock ? qty + RANDOM.nextInt(50) : 0;
-
-            span.setAttribute("inventory.available_qty", (long) availableQty);
-            span.setAttribute("inventory.in_stock", inStock);
-
-            if (inStock) {
-                span.setStatus(StatusCode.OK);
-            } else {
-                span.setStatus(StatusCode.ERROR, "Product out of stock");
-                span.addEvent("stock.exhausted",
-                        Attributes.builder()
-                                .put("product", product)
-                                .build());
-            }
-
-            return inStock;
-
-        } finally {
-            span.end();
-        }
-    }
-
-    // ── Payment child span ────────────────────────────────────────────────────
-
-    /**
-     * Simulates a call to the payment gateway.
-     * Randomly declines ~10 % of payments to exercise error paths.
-     */
-    private static boolean simulatePayment(
-            Tracer tracer,
-            String orderId,
-            String userId,
-            double amount) throws InterruptedException {
-
-        String transactionId = "txn-" + UUID.randomUUID().toString().substring(0, 12);
-
-        Span span = tracer.spanBuilder("payment")
-                .setSpanKind(SpanKind.CLIENT)
-                .setAttribute("payment.order_id",      orderId)
-                .setAttribute("payment.user_id",       userId)
-                .setAttribute("payment.amount",        amount)
-                .setAttribute("payment.currency",      "USD")
-                .setAttribute("payment.transaction_id", transactionId)
-                .setAttribute("payment.gateway",       "stripe-mock")
-                .startSpan();
-
-        try (Scope ignored = span.makeCurrent()) {
-            // Simulate latency to payment gateway
-            TimeUnit.MILLISECONDS.sleep(80 + RANDOM.nextInt(220));
-
-            // 10 % chance of payment failure
-            boolean approved = RANDOM.nextDouble() > 0.10;
-
-            span.setAttribute("payment.approved", approved);
-            span.setAttribute("payment.response_code", approved ? "00" : "51");
-
-            if (approved) {
-                span.setStatus(StatusCode.OK);
-                span.addEvent("payment.authorized",
-                        Attributes.builder()
-                                .put("transaction.id", transactionId)
-                                .put("amount", amount)
-                                .build());
-            } else {
-                span.setStatus(StatusCode.ERROR, "Payment declined by gateway");
-                span.addEvent("payment.declined",
-                        Attributes.builder()
-                                .put("reason", "insufficient_funds")
-                                .put("transaction.id", transactionId)
-                                .build());
-            }
-
-            return approved;
-
-        } finally {
-            span.end();
-        }
     }
 
     // ── SDK factory ──────────────────────────────────────────────────────────

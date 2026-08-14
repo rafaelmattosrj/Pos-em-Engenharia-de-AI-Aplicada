@@ -1,0 +1,33 @@
+{
+  "generatedAt" : "2026-08-14T02:55:56.754697600Z",
+  "totalScenarios" : 5,
+  "results" : [ {
+    "architecture" : "ReactAgent",
+    "completionRate" : 0.8428,
+    "avgSteps" : 4.3832,
+    "avgTokensEstimated" : 1723,
+    "toolSuccessRate" : 0.9066,
+    "toolCoverage" : 0.896
+  }, {
+    "architecture" : "PlanExecuteAgent",
+    "completionRate" : 0.9203,
+    "avgSteps" : 2.9688,
+    "avgTokensEstimated" : 2310,
+    "toolSuccessRate" : 0.9935,
+    "toolCoverage" : 0.983
+  }, {
+    "architecture" : "ReflectionAgent",
+    "completionRate" : 0.8019,
+    "avgSteps" : 5.7365,
+    "avgTokensEstimated" : 3299,
+    "toolSuccessRate" : 0.8713,
+    "toolCoverage" : 0.8161
+  } ],
+  "verdict" : {
+    "melhor_cobertura_ferramentas" : "PlanExecuteAgent",
+    "menor_custo" : "ReactAgent",
+    "recomendado_geral" : "PlanExecuteAgent",
+    "melhor_conclusao" : "PlanExecuteAgent",
+    "mais_eficiente" : "PlanExecuteAgent"
+  }
+}

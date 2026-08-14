@@ -17,6 +17,8 @@ import org.neo4j.driver.Driver;
 import org.neo4j.driver.GraphDatabase;
 import org.neo4j.driver.Session;
 
+import com.embeddings.util.TextPreview;
+
 import java.nio.file.Path;
 import java.util.List;
 
@@ -137,9 +139,7 @@ public class Main {
                 EmbeddingMatch<TextSegment> match = matches.get(i);
                 double score = match.score();
                 String fullText = match.embedded().text();
-                String preview = fullText.length() > PREVIEW_LENGTH
-                        ? fullText.substring(0, PREVIEW_LENGTH) + "..."
-                        : fullText;
+                String preview = TextPreview.truncate(fullText, PREVIEW_LENGTH);
 
                 System.out.printf("  Resultado #%d  |  Score: %.4f%n", i + 1, score);
                 System.out.println("  " + "-".repeat(60));

@@ -1,0 +1,46 @@
+package com.iadeva.roteamento;
+
+import com.iadeva.roteamento.graph.GraphState;
+import com.iadeva.roteamento.graph.WorkflowOrchestrator;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+@WebMvcTest(ChatController.class)
+class ChatControllerTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @MockBean
+    private WorkflowOrchestrator orchestrator;
+
+    @Test
+    void postChat_retornaOutputDoOrchestratorComoTextoPuro() throws Exception {
+        when(orchestrator.invoke(anyString()))
+                .thenReturn(new GraphState(java.util.List.of("converte para UPPER"), "CONVERTE PARA UPPER", GraphState.Command.UPPERCASE));
+
+        mockMvc.perform(post("/chat")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"question\":\"converte para UPPER\"}"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("CONVERTE PARA UPPER"));
+    }
+
+    @Test
+    void postChat_retorna400QuandoQuestionMenorQue5Caracteres() throws Exception {
+        mockMvc.perform(post("/chat")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"question\":\"oi\"}"))
+                .andExpect(status().isBadRequest());
+    }
+}

@@ -15,6 +15,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <langchain4j.version>1.12.2</langchain4j.version>
         <langchain4j.beta.version>1.12.2-beta22</langchain4j.beta.version>
+        <junit.version>5.10.2</junit.version>
+        <assertj.version>3.25.3</assertj.version>
     </properties>
 
     <dependencies>
@@ -66,6 +68,20 @@
             <artifactId>slf4j-simple</artifactId>
             <version>2.0.16</version>
         </dependency>
+
+        <!-- Testes -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -86,6 +102,11 @@
                 <configuration>
                     <mainClass>com.example.Main</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
             </plugin>
         </plugins>
     </build>

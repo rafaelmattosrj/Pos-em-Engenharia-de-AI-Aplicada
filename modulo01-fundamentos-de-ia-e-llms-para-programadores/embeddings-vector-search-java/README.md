@@ -116,6 +116,33 @@ O Maven vai:
 
 ---
 
+## Como testar
+
+```bash
+mvn test
+```
+
+Os testes (JUnit 5 + AssertJ) rodam 100% offline/local (nao precisam de Neo4j nem internet) e
+cobrem os mesmos cenarios validados no porte Go (`../embeddings-vector-search-go`):
+
+- `TextPreviewTest` — truncamento do preview de texto exibido nos resultados (texto menor,
+  igual e maior que o limite, incluindo `null`/vazio).
+- `DocumentSplitterTest` — chunking com `DocumentSplitters.recursive(1000, 200)`: texto curto
+  vira um unico chunk, texto longo respeita o `chunkSize`, chunks consecutivos compartilham o
+  overlap configurado, e texto sem separadores e dividido "na força" (hard split).
+- `EmbeddingModelTest` — o modelo local `AllMiniLmL6V2EmbeddingModel` produz vetores de 384
+  dimensoes, é determinístico para o mesmo texto, produz vetores diferentes para textos
+  diferentes, e frases semanticamente próximas têm similaridade de cosseno maior que frases
+  não relacionadas.
+
+**Diferença em relação ao porte Go:** o Go reimplementa o splitter na mão (`splitter/splitter.go`)
+e fala com o Ollama via HTTP (`embeddings/ollama.go`), então os testes lá usam `httptest.Server`
+para simular sucesso/erro do servidor de embeddings. A versão Java delega chunking para o
+LangChain4j e roda o `all-MiniLM-L6-v2` in-process via ONNX Runtime — não há chamada de rede a
+mockar, então os testes chamam a biblioteca diretamente.
+
+---
+
 ## O que o programa faz (passo a passo)
 
 | Etapa | Descricao |

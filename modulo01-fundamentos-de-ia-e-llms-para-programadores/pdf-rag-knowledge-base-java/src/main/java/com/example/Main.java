@@ -21,40 +21,10 @@ import org.neo4j.driver.Session;
 
 import java.nio.file.Path;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static dev.langchain4j.data.document.loader.FileSystemDocumentLoader.loadDocument;
 
 public class Main {
-
-    private static final String PROMPT_TEMPLATE = """
-            Você é um assistente especializado em TensorFlow.js e machine learning.
-
-            **Contexto e Regras:**
-            - Tarefa: Responder perguntas sobre TensorFlow.js e machine learning de forma educacional
-            - Tom de voz: educacional e amigável
-            - Idioma: pt-BR
-            - Formato de resposta: texto natural com exemplos
-
-            **Instruções importantes:**
-            1. Use APENAS as informações do contexto fornecido para responder
-            2. Se o contexto não contiver informação suficiente, diga que não encontrou a informação
-            3. Seja claro, objetivo e use exemplos quando apropriado
-            4. Mantenha um tom educacional e amigável
-            5. Se houver código ou exemplos no contexto, inclua-os na resposta
-            6. Responda em português de forma natural e conversacional
-            7. Estruture sua resposta em parágrafos quando necessário
-            8. Use analogias e exemplos práticos para facilitar o entendimento
-
-            **Pergunta do usuário:**
-            %s
-
-            **Contexto recuperado do documento:**
-            %s
-
-            **Resposta:**
-            Forneça uma resposta clara, educacional e em português. Use exemplos do contexto quando disponível.
-            """;
 
     public static void main(String[] args) {
         System.out.println("🚀 Inicializando sistema de RAG com Neo4j (Java)...\n");
@@ -123,6 +93,8 @@ public class Main {
                 .maxRetries(2)
                 .build();
 
+        RagAnswerService ragAnswerService = new RagAnswerService(chatModel::chat);
+
         // ─── ETAPA 6: Pipeline RAG — perguntas e respostas ───────────────────
         List<String> questions = List.of(
                 "Como converter objetos JavaScript em tensores?",
@@ -160,25 +132,24 @@ public class Main {
             System.out.printf("✅ Encontrados %d resultados relevantes (melhor score: %.3f)%n",
                     matches.size(), topScore);
 
-            // Filtra por score mínimo e monta contexto
-            String context = matches.stream()
-                    .filter(m -> m.score() > 0.5)
-                    .map(m -> m.embedded().text())
-                    .collect(Collectors.joining("\n\n---\n\n"));
+            List<RagContextBuilder.Trecho> trechos = matches.stream()
+                    .map(m -> new RagContextBuilder.Trecho(m.embedded().text(), m.score()))
+                    .toList();
 
-            if (context.isBlank()) {
-                System.out.println("⚠️  Nenhum resultado com score suficiente (> 0.5).\n");
-                continue;
-            }
+            RagAnswerService.Resultado resultado = ragAnswerService.responder(question, trechos);
 
-            // Gera resposta com o LLM
-            System.out.println("🤖 Gerando resposta com IA...");
-            String prompt = String.format(PROMPT_TEMPLATE, question, context);
-            try {
-                String answer = chatModel.chat(prompt);
-                System.out.println("\n" + answer + "\n");
-            } catch (Exception e) {
-                System.out.println("❌ Erro ao chamar LLM: " + e.getMessage().substring(0, Math.min(200, e.getMessage().length())) + "\n");
+            switch (resultado.tipo()) {
+                case SEM_RESULTADOS -> System.out.println("⚠️  Nenhum resultado encontrado na base de conhecimento.\n");
+                case SEM_CONTEXTO_RELEVANTE -> System.out.printf(
+                        "⚠️  Nenhum resultado com score suficiente (> %.1f).%n%n", RagContextBuilder.MIN_SCORE);
+                case SUCESSO -> {
+                    System.out.println("🤖 Gerando resposta com IA...");
+                    System.out.println("\n" + resultado.resposta() + "\n");
+                }
+                case FALHA -> {
+                    System.out.println("🤖 Gerando resposta com IA...");
+                    System.out.println("❌ Erro ao chamar LLM: " + resultado.erro() + "\n");
+                }
             }
         }
 

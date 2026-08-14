@@ -5,6 +5,7 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.openai.api.OpenAiApi;
+import org.springframework.ai.retry.RetryUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -20,15 +21,23 @@ public class GuardrailsService {
 
     public GuardrailsService(
             @Value("${spring.ai.openai.api-key}") String apiKey,
-            @Value("${app.guardrails.model}") String guardrailsModel) {
+            @Value("${app.guardrails.model}") String guardrailsModel,
+            @Value("${spring.ai.openai.base-url:https://openrouter.ai/api/v1}") String baseUrl) {
 
-        OpenAiApi api = new OpenAiApi("https://openrouter.ai/api/v1", apiKey);
+        OpenAiApi api = new OpenAiApi(baseUrl, apiKey);
+        // Guardrails é uma verificação de segurança fail-fast: usa o SHORT_RETRY_TEMPLATE
+        // (poucas tentativas, backoff curto) em vez do DEFAULT_RETRY_TEMPLATE do Spring AI
+        // (até 10 tentativas com backoff exponencial de até 180s), que é voltado para o
+        // chat principal e tornaria uma falha de guardrails lenta por minutos antes de
+        // acionar o comportamento fail-safe (bloquear).
         OpenAiChatModel model = new OpenAiChatModel(api,
                 OpenAiChatOptions.builder()
                         .model(guardrailsModel)
                         .temperature(0.0)
                         .maxTokens(100)
-                        .build());
+                        .build(),
+                null,
+                RetryUtils.SHORT_RETRY_TEMPLATE);
 
         this.guardrailsClient = ChatClient.builder(model).build();
     }

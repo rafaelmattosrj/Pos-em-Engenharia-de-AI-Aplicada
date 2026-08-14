@@ -1,8 +1,7 @@
 package com.openrouter;
 
-import dev.langchain4j.model.chat.ChatLanguageModel;
+import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
-import io.github.cdimascio.dotenv.Dotenv;
 
 import java.time.Duration;
 import java.util.List;
@@ -41,13 +40,9 @@ public class Main {
 
     public static void main(String[] args) {
         // Carrega variáveis do arquivo .env (na raiz do projeto)
-        Dotenv dotenv = Dotenv.configure()
-                .ignoreIfMissing() // não lança exceção se .env não existir
-                .load();
+        OpenRouterConfig config = OpenRouterConfig.load();
 
-        String apiKey = dotenv.get("OPENROUTER_API_KEY");
-
-        if (apiKey == null || apiKey.isBlank()) {
+        if (!config.isValid()) {
             System.err.println("ERRO: A variável OPENROUTER_API_KEY não foi encontrada.");
             System.err.println("Crie um arquivo .env na raiz do projeto com o conteúdo:");
             System.err.println("  OPENROUTER_API_KEY=sk-or-...");
@@ -61,16 +56,18 @@ public class Main {
         System.out.println("  \"" + PERGUNTA + "\"");
         System.out.println("=".repeat(60));
 
-        for (String modelo : MODELOS) {
+        MultiModelChatRunner runner = new MultiModelChatRunner(
+                (modelo, mensagem) -> chamarModelo(config.apiKey(), modelo, mensagem));
+
+        for (MultiModelChatRunner.Resultado resultado : runner.executar(MODELOS, PERGUNTA)) {
             System.out.println();
-            System.out.println("Modelo: " + modelo);
+            System.out.println("Modelo: " + resultado.modelo());
             System.out.println("-".repeat(60));
 
-            try {
-                String resposta = chamarModelo(apiKey, modelo, PERGUNTA);
-                System.out.println(resposta);
-            } catch (Exception e) {
-                System.err.println("Erro ao chamar o modelo [" + modelo + "]: " + e.getMessage());
+            if (resultado.sucesso()) {
+                System.out.println(resultado.resposta());
+            } else {
+                System.err.println("Erro ao chamar o modelo [" + resultado.modelo() + "]: " + resultado.erro());
             }
 
             System.out.println("-".repeat(60));
@@ -91,7 +88,7 @@ public class Main {
      * @return Texto da resposta do modelo
      */
     private static String chamarModelo(String apiKey, String modelo, String mensagem) {
-        ChatLanguageModel chatModel = OpenAiChatModel.builder()
+        ChatModel chatModel = OpenAiChatModel.builder()
                 .baseUrl(OPENROUTER_BASE_URL)
                 .apiKey(apiKey)
                 .modelName(modelo)
@@ -103,6 +100,6 @@ public class Main {
                 .logResponses(false)
                 .build();
 
-        return chatModel.generate(mensagem);
+        return chatModel.chat(mensagem);
     }
 }

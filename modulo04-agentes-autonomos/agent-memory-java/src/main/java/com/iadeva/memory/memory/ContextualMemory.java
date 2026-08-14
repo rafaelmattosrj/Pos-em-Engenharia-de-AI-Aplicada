@@ -38,7 +38,7 @@ public class ContextualMemory {
      * @param metadata metadados associados (fonte, tipo, etc.)
      */
     public void store(String content, Map<String, Object> metadata) {
-        float[] embedding = toFloatArray(embeddingModel.embed(content));
+        float[] embedding = embeddingModel.embed(content);
         entries.add(new EmbeddingEntry(content, embedding, metadata));
     }
 
@@ -51,7 +51,7 @@ public class ContextualMemory {
      * @return lista de entradas ordenadas por similaridade decrescente
      */
     public List<EmbeddingEntry> search(String query, int topK) {
-        float[] queryEmbedding = toFloatArray(embeddingModel.embed(query));
+        float[] queryEmbedding = embeddingModel.embed(query);
 
         return entries.stream()
                 .map(entry -> new ScoredEntry(entry, cosineSimilarity(queryEmbedding, entry.embedding())))
@@ -84,15 +84,6 @@ public class ContextualMemory {
 
         double denominator = Math.sqrt(normA) * Math.sqrt(normB);
         return denominator == 0.0 ? 0.0 : dotProduct / denominator;
-    }
-
-    // Converte List<Double> retornado pelo Spring AI para float[]
-    private float[] toFloatArray(List<Double> doubles) {
-        float[] arr = new float[doubles.size()];
-        for (int i = 0; i < doubles.size(); i++) {
-            arr[i] = doubles.get(i).floatValue();
-        }
-        return arr;
     }
 
     /**

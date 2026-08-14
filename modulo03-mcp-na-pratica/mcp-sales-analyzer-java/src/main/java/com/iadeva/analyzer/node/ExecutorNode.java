@@ -41,7 +41,7 @@ public class ExecutorNode {
         // Adiciona tools MCP se houver servidores configurados
         if (mcpToolProviders != null && !mcpToolProviders.isEmpty()) {
             for (ToolCallbackProvider provider : mcpToolProviders) {
-                builder = builder.defaultToolCallbacks(provider);
+                builder = builder.defaultTools(provider);
             }
         }
 

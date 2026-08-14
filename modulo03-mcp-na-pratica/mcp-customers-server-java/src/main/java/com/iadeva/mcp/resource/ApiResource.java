@@ -95,8 +95,8 @@ public class ApiResource {
         );
 
         // Handler que retorna o conteúdo do resource quando o LLM o solicitar
-        McpServerFeatures.SyncResourceRegistration.ReadResourceHandler handler =
-                (exchange, request) -> new McpSchema.ReadResourceResult(
+        java.util.function.Function<McpSchema.ReadResourceRequest, McpSchema.ReadResourceResult> handler =
+                request -> new McpSchema.ReadResourceResult(
                         List.of(new McpSchema.TextResourceContents(
                                 "info://api",
                                 "text/markdown",

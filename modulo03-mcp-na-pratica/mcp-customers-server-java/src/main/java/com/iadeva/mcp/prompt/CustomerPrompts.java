@@ -36,7 +36,7 @@ public class CustomerPrompts {
         );
 
         // Handler que recebe os argumentos e retorna as mensagens do prompt
-        McpServerFeatures.SyncPromptRegistration.GetPromptHandler handler = (exchange, request) -> {
+        java.util.function.Function<McpSchema.GetPromptRequest, McpSchema.GetPromptResult> handler = request -> {
             String query = request.arguments() != null
                     ? request.arguments().getOrDefault("query", "").toString()
                     : "";
@@ -86,7 +86,7 @@ public class CustomerPrompts {
         );
 
         // Handler que constrói o prompt de criação com os dados fornecidos
-        McpServerFeatures.SyncPromptRegistration.GetPromptHandler handler = (exchange, request) -> {
+        java.util.function.Function<McpSchema.GetPromptRequest, McpSchema.GetPromptResult> handler = request -> {
             Map<String, Object> args = request.arguments() != null ? request.arguments() : Map.of();
             String name = args.getOrDefault("name", "").toString();
             String phone = args.getOrDefault("phone", "").toString();

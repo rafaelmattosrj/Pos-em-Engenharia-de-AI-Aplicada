@@ -1,1 +1,10 @@
+com\example\Main$1.class
+com\example\RagAnswerService$Resultado.class
+com\example\RagAnswerService$ChatFn.class
+com\example\RagAnswerService.class
+com\example\RagContextBuilder$Trecho.class
 com\example\Main.class
+com\example\ErrorMessages.class
+com\example\PromptBuilder.class
+com\example\RagAnswerService$Tipo.class
+com\example\RagContextBuilder.class

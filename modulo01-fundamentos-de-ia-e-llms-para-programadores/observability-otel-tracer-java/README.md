@@ -95,22 +95,26 @@ observability-otel-tracer/
 ├── pom.xml                                 Maven build descriptor
 ├── .env.example                            Copy to .env and adjust
 └── src/
-    └── main/
-        └── java/
-            └── com/
-                └── observability/
-                    └── Main.java           Application entry point
+    ├── main/java/com/observability/
+    │   ├── Main.java                       Application entry point (config, SDK wiring, run loop)
+    │   └── CheckoutSimulator.java          Checkout flow (spans, attributes, counter) — testable in isolation
+    └── test/java/com/observability/
+        └── CheckoutSimulatorTest.java      Unit tests for the checkout flow
 ```
 
-### Main.java highlights
+### Responsibilities
 
-| Method                 | Responsibility                                                   |
-|------------------------|------------------------------------------------------------------|
-| `main`                 | Loads .env, builds SDK, runs 5 simulated checkouts, shuts down  |
-| `buildSdk`             | Wires `SdkTracerProvider` + `SdkMeterProvider` with OTLP gRPC   |
-| `simulateCheckout`     | Root `checkout` span (SpanKind.SERVER) with order attributes     |
-| `simulateInventoryCheck` | Child `inventory-check` span (SpanKind.CLIENT), 15 % failure   |
-| `simulatePayment`      | Child `payment` span (SpanKind.CLIENT), 10 % decline            |
+| Class / Method                  | Responsibility                                                   |
+|----------------------------------|------------------------------------------------------------------|
+| `Main.main`                      | Loads .env, builds SDK, runs 5 simulated checkouts, shuts down  |
+| `Main.buildSdk`                  | Wires `SdkTracerProvider` + `SdkMeterProvider` with OTLP gRPC   |
+| `CheckoutSimulator.simulateCheckout`     | Root `checkout` span (SpanKind.SERVER) with order attributes     |
+| `CheckoutSimulator.simulateInventoryCheck` | Child `inventory-check` span (SpanKind.CLIENT), 15 % failure   |
+| `CheckoutSimulator.simulatePayment`      | Child `payment` span (SpanKind.CLIENT), 10 % decline            |
+
+`CheckoutSimulator` was extracted from `Main` (same logic, unchanged behavior) specifically so the
+checkout flow — nested spans, attributes, error status paths, and the `orders.placed` counter —
+could be unit-tested with an in-memory exporter instead of requiring a live OTel Collector.
 
 ---
 
@@ -177,6 +181,30 @@ Open <http://localhost:3000> and navigate to:
 cd ../exemplo-09-grafana-mcp/alumnus
 docker compose -f infra/docker-compose-infra.yaml down
 ```
+
+---
+
+## Testing
+
+```bash
+mvn test
+```
+
+Tests run fully offline — no OTel Collector, Docker, or network required. They use
+`io.opentelemetry:opentelemetry-sdk-testing` (`InMemorySpanExporter` / `InMemoryMetricReader`) to
+capture spans/metrics in-process, and a Mockito-mocked `Random` to deterministically force each
+branch instead of relying on the ~15 %/~10 % production probabilities.
+
+`CheckoutSimulatorTest` covers the three possible outcomes of a checkout:
+
+- **Success** — `checkout`, `inventory-check` and `payment` spans all end with `StatusCode.OK`,
+  `checkout.outcome=success`, and the `orders.placed` counter is incremented by 1.
+- **Out of stock** — `inventory-check` fails, `checkout` ends with `StatusCode.ERROR` /
+  `"Item out of stock"` / `checkout.outcome=out_of_stock`, no `payment` span is created, and the
+  counter is not incremented.
+- **Payment declined** — `inventory-check` passes but `payment` fails; `checkout` ends with
+  `StatusCode.ERROR` / `"Payment declined"` / `checkout.outcome=payment_declined`, and the counter
+  is not incremented.
 
 ---
 

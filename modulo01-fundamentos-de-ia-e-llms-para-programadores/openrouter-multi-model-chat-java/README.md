@@ -127,13 +127,13 @@ O OpenRouter é **compatível com a API da OpenAI**. O LangChain4j fornece a cla
 `https://openrouter.ai/api/v1` e usar a chave do OpenRouter como `apiKey`:
 
 ```java
-ChatLanguageModel model = OpenAiChatModel.builder()
+ChatModel model = OpenAiChatModel.builder()
     .baseUrl("https://openrouter.ai/api/v1")
     .apiKey(System.getenv("OPENROUTER_API_KEY"))
     .modelName("google/gemma-3-27b-it:free")
     .build();
 
-String resposta = model.generate("Me conte uma curiosidade sobre LLMs.");
+String resposta = model.chat("Me conte uma curiosidade sobre LLMs.");
 ```
 
 ### Nota sobre headers opcionais do OpenRouter
@@ -149,6 +149,28 @@ Esses headers aparecem no dashboard de uso do OpenRouter e ajudam a identificar
 de onde vêm as requisições. O `OpenAiChatModel` do LangChain4j não expõe headers
 HTTP customizados por requisição em sua API de alto nível. Se precisar enviá-los,
 use o cliente HTTP diretamente (OkHttp ou `java.net.http.HttpClient`).
+
+---
+
+## Testes
+
+A validação da chave de API (`OpenRouterConfig`) e a orquestração de chamadas a múltiplos
+modelos (`MultiModelChatRunner`) foram extraídas de `Main.java` para classes isoladas e
+testadas com JUnit 5 + AssertJ — sem depender de chamadas HTTP reais, mesma abordagem usada
+no porte Go (`openrouter-multi-model-chat-go/openrouter/client_test.go`, testado com
+`httptest`).
+
+Cenários cobertos (equivalentes ao pacote Go `openrouter`):
+
+- resposta com sucesso;
+- mensagem de erro da API propagada (ex.: rate limit);
+- falha em um modelo sem interromper os demais;
+- chave de API ausente/em branco é inválida;
+- lista de modelos vazia não realiza chamadas.
+
+```bash
+mvn test
+```
 
 ---
 

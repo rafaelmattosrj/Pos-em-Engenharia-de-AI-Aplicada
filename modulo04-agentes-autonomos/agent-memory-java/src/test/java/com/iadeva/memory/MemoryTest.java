@@ -94,9 +94,9 @@ class MemoryTest {
 
         // Mock: primeira chamada = query, segunda = vetorSimilar, terceira = vetorDistante
         when(embeddingModelMock.embed(anyString()))
-                .thenReturn(toDoubleList(vetorBase))    // embed da query
-                .thenReturn(toDoubleList(vetorSimilar)) // store conteúdo 1
-                .thenReturn(toDoubleList(vetorDistante)); // store conteúdo 2
+                .thenReturn(vetorBase)    // embed da query
+                .thenReturn(vetorSimilar) // store conteúdo 1
+                .thenReturn(vetorDistante); // store conteúdo 2
 
         // Threshold 0.7 — só vetorSimilar deve passar
         ContextualMemory memory = new ContextualMemory(embeddingModelMock, 0.7);
@@ -104,9 +104,9 @@ class MemoryTest {
         // Simula stores já realizados (precisamos que o mock forneça embeddings ao store)
         // Estratégia: resetar mock e configurar para store → search
         Mockito.reset(embeddingModelMock);
-        when(embeddingModelMock.embed("conteúdo relevante")).thenReturn(toDoubleList(vetorSimilar));
-        when(embeddingModelMock.embed("conteúdo irrelevante")).thenReturn(toDoubleList(vetorDistante));
-        when(embeddingModelMock.embed("query de busca")).thenReturn(toDoubleList(vetorBase));
+        when(embeddingModelMock.embed("conteúdo relevante")).thenReturn(vetorSimilar);
+        when(embeddingModelMock.embed("conteúdo irrelevante")).thenReturn(vetorDistante);
+        when(embeddingModelMock.embed("query de busca")).thenReturn(vetorBase);
 
         memory.store("conteúdo relevante", Map.of("tipo", "teste"));
         memory.store("conteúdo irrelevante", Map.of("tipo", "teste"));
@@ -146,10 +146,4 @@ class MemoryTest {
         assertThat(recentes.get(2).input()).isEqualTo("input 3");
     }
 
-    // Utilitário: converte float[] para List<Double> (formato retornado pelo EmbeddingModel)
-    private List<Double> toDoubleList(float[] arr) {
-        List<Double> list = new java.util.ArrayList<>();
-        for (float v : arr) list.add((double) v);
-        return list;
-    }
 }
