@@ -1,0 +1,7 @@
+{"instruction": "Extraia o nome do produto mencionado no texto abaixo.", "context": "O produto XPTO foi lancado em 2023 com grande sucesso de vendas em todo o pais.", "response": "XPTO", "category": "information_extraction"}
+{"instruction": "Responda com base no contexto fornecido qual e a capital.", "context": "A capital da Franca e Paris, uma cidade conhecida por sua torre.", "response": "Paris", "category": "closed_qa"}
+{"instruction": "Explique o que e fotossintese em poucas palavras simples.", "context": "", "response": "Processo pelo qual plantas convertem luz em energia quimica.", "category": "open_qa"}
+{"instruction": "Resuma o texto abaixo em uma frase curta.", "context": "", "response": "Resumo vazio pois nao ha contexto disponivel para resumir.", "category": "summarization"}
+{"instruction": "Resuma o texto abaixo em uma frase curta e objetiva.", "context": "O mercado de acoes fechou em alta nesta sexta-feira apos noticias positivas sobre inflacao controlada no pais.", "response": "Mercado fechou em alta apos noticias de inflacao controlada.", "category": "summarization"}
+
+{"instruction": "Extraia o nome do produto mencionado no texto abaixo.", "context": "O produto XPTO foi lancado em 2023 com grande sucesso de vendas em todo o pais.", "response": "XPTO", "category": "information_extraction"}
