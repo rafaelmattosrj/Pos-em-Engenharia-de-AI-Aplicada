@@ -11,6 +11,9 @@ node_modules/
 # Binarios compilados
 *.exe
 
+# Build Maven/Java
+target/
+
 # Logs de ferramentas locais
 .playwright-mcp/
 neo4j/logs/
