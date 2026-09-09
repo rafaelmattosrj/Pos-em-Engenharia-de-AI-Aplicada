@@ -1,0 +1,502 @@
+[
+  {
+    "amount": 2800.0,
+    "method": "CREDIT_CARD",
+    "brand": "MASTERCARD",
+    "region": "RJ",
+    "hour": 23,
+    "category": "STREAMING",
+    "psp": "ADYEN",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 1200.0,
+    "method": "CREDIT_CARD",
+    "brand": "AMEX",
+    "region": "SP",
+    "hour": 19,
+    "category": "STREAMING",
+    "psp": "ADYEN",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 1500.0,
+    "method": "CREDIT_CARD",
+    "brand": "VISA",
+    "region": "SP",
+    "hour": 20,
+    "category": "STREAMING",
+    "psp": "ADYEN",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 1780.0,
+    "method": "CREDIT_CARD",
+    "brand": "VISA",
+    "region": "SP",
+    "hour": 21,
+    "category": "STREAMING",
+    "psp": "ADYEN",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 1320.0,
+    "method": "CREDIT_CARD",
+    "brand": "VISA",
+    "region": "RJ",
+    "hour": 22,
+    "category": "STREAMING",
+    "psp": "ADYEN",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 3400.0,
+    "method": "CREDIT_CARD",
+    "brand": "AMEX",
+    "region": "RJ",
+    "hour": 20,
+    "category": "SPORTS",
+    "psp": "ADYEN",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 990.0,
+    "method": "CREDIT_CARD",
+    "brand": "MASTERCARD",
+    "region": "SP",
+    "hour": 18,
+    "category": "MUSIC",
+    "psp": "ADYEN",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 2100.0,
+    "method": "CREDIT_CARD",
+    "brand": "VISA",
+    "region": "RJ",
+    "hour": 0,
+    "category": "GAMING",
+    "psp": "ADYEN",
+    "status": "FAILED"
+  },
+  {
+    "amount": 299.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "SP",
+    "hour": 14,
+    "category": "STREAMING",
+    "psp": "BRASPAG",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 59.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "BA",
+    "hour": 10,
+    "category": "STREAMING",
+    "psp": "BRASPAG",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 89.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "MG",
+    "hour": 11,
+    "category": "MUSIC",
+    "psp": "BRASPAG",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 149.9,
+    "method": "CREDIT_CARD",
+    "brand": "ELO",
+    "region": "RS",
+    "hour": 15,
+    "category": "GAMING",
+    "psp": "BRASPAG",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 39.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "PR",
+    "hour": 9,
+    "category": "NEWS",
+    "psp": "BRASPAG",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 219.9,
+    "method": "CREDIT_CARD",
+    "brand": "ELO",
+    "region": "CE",
+    "hour": 16,
+    "category": "STREAMING",
+    "psp": "BRASPAG",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 79.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "DF",
+    "hour": 13,
+    "category": "EBOOKS",
+    "psp": "BRASPAG",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 129.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "PE",
+    "hour": 17,
+    "category": "STREAMING",
+    "psp": "BRASPAG",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 149.9,
+    "method": "CREDIT_CARD",
+    "brand": "VISA",
+    "region": "SP",
+    "hour": 3,
+    "category": "STREAMING",
+    "psp": "BRADESCO",
+    "status": "FAILED"
+  },
+  {
+    "amount": 189.9,
+    "method": "CREDIT_CARD",
+    "brand": "MASTERCARD",
+    "region": "RJ",
+    "hour": 23,
+    "category": "GAMING",
+    "psp": "BRADESCO",
+    "status": "FAILED"
+  },
+  {
+    "amount": 99.9,
+    "method": "CREDIT_CARD",
+    "brand": "ELO",
+    "region": "MG",
+    "hour": 14,
+    "category": "MUSIC",
+    "psp": "BRADESCO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 159.9,
+    "method": "CREDIT_CARD",
+    "brand": "VISA",
+    "region": "SP",
+    "hour": 11,
+    "category": "STREAMING",
+    "psp": "BRADESCO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 179.9,
+    "method": "CREDIT_CARD",
+    "brand": "MASTERCARD",
+    "region": "BA",
+    "hour": 1,
+    "category": "STREAMING",
+    "psp": "BRADESCO",
+    "status": "FAILED"
+  },
+  {
+    "amount": 119.9,
+    "method": "CREDIT_CARD",
+    "brand": "ELO",
+    "region": "RS",
+    "hour": 15,
+    "category": "NEWS",
+    "psp": "BRADESCO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 139.9,
+    "method": "CREDIT_CARD",
+    "brand": "VISA",
+    "region": "PR",
+    "hour": 10,
+    "category": "GAMING",
+    "psp": "BRADESCO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 169.9,
+    "method": "CREDIT_CARD",
+    "brand": "MASTERCARD",
+    "region": "SP",
+    "hour": 0,
+    "category": "STREAMING",
+    "psp": "BRADESCO",
+    "status": "FAILED"
+  },
+  {
+    "amount": 19.9,
+    "method": "WALLET",
+    "brand": "PICPAY",
+    "region": "MG",
+    "hour": 8,
+    "category": "GAMING",
+    "psp": "PICPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 29.9,
+    "method": "WALLET",
+    "brand": "PICPAY",
+    "region": "SP",
+    "hour": 12,
+    "category": "STREAMING",
+    "psp": "PICPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 14.9,
+    "method": "WALLET",
+    "brand": "PICPAY",
+    "region": "RJ",
+    "hour": 20,
+    "category": "MUSIC",
+    "psp": "PICPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 24.9,
+    "method": "WALLET",
+    "brand": "PICPAY",
+    "region": "BA",
+    "hour": 16,
+    "category": "NEWS",
+    "psp": "PICPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 34.9,
+    "method": "WALLET",
+    "brand": "PICPAY",
+    "region": "PR",
+    "hour": 9,
+    "category": "STREAMING",
+    "psp": "PICPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 9.9,
+    "method": "WALLET",
+    "brand": "PICPAY",
+    "region": "CE",
+    "hour": 21,
+    "category": "GAMING",
+    "psp": "PICPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 44.9,
+    "method": "WALLET",
+    "brand": "PICPAY",
+    "region": "SP",
+    "hour": 13,
+    "category": "EBOOKS",
+    "psp": "PICPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 9.9,
+    "method": "WALLET",
+    "brand": "MERCADOPAGO",
+    "region": "RJ",
+    "hour": 15,
+    "category": "NEWS",
+    "psp": "MERCADOPAGO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 12.9,
+    "method": "WALLET",
+    "brand": "MERCADOPAGO",
+    "region": "SP",
+    "hour": 18,
+    "category": "MUSIC",
+    "psp": "MERCADOPAGO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 19.9,
+    "method": "WALLET",
+    "brand": "MERCADOPAGO",
+    "region": "MG",
+    "hour": 10,
+    "category": "STREAMING",
+    "psp": "MERCADOPAGO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 7.9,
+    "method": "WALLET",
+    "brand": "MERCADOPAGO",
+    "region": "RS",
+    "hour": 19,
+    "category": "GAMING",
+    "psp": "MERCADOPAGO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 15.9,
+    "method": "WALLET",
+    "brand": "MERCADOPAGO",
+    "region": "BA",
+    "hour": 11,
+    "category": "EBOOKS",
+    "psp": "MERCADOPAGO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 22.9,
+    "method": "WALLET",
+    "brand": "MERCADOPAGO",
+    "region": "DF",
+    "hour": 14,
+    "category": "STREAMING",
+    "psp": "MERCADOPAGO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 11.9,
+    "method": "WALLET",
+    "brand": "MERCADOPAGO",
+    "region": "PE",
+    "hour": 17,
+    "category": "NEWS",
+    "psp": "MERCADOPAGO",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 450.0,
+    "method": "CREDIT_CARD",
+    "brand": "NUBANK",
+    "region": "SP",
+    "hour": 20,
+    "category": "STREAMING",
+    "psp": "NUPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 380.0,
+    "method": "CREDIT_CARD",
+    "brand": "NUBANK",
+    "region": "RJ",
+    "hour": 19,
+    "category": "GAMING",
+    "psp": "NUPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 520.0,
+    "method": "CREDIT_CARD",
+    "brand": "NUBANK",
+    "region": "MG",
+    "hour": 21,
+    "category": "MUSIC",
+    "psp": "NUPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 410.0,
+    "method": "CREDIT_CARD",
+    "brand": "NUBANK",
+    "region": "BA",
+    "hour": 18,
+    "category": "STREAMING",
+    "psp": "NUPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 490.0,
+    "method": "CREDIT_CARD",
+    "brand": "NUBANK",
+    "region": "PR",
+    "hour": 22,
+    "category": "SPORTS",
+    "psp": "NUPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 360.0,
+    "method": "CREDIT_CARD",
+    "brand": "NUBANK",
+    "region": "SP",
+    "hour": 17,
+    "category": "EBOOKS",
+    "psp": "NUPAY",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 620.0,
+    "method": "CREDIT_CARD",
+    "brand": "SANTANDER",
+    "region": "SP",
+    "hour": 10,
+    "category": "STREAMING",
+    "psp": "SANTANDER",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 58.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "RJ",
+    "hour": 11,
+    "category": "MUSIC",
+    "psp": "SANTANDER",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 740.0,
+    "method": "CREDIT_CARD",
+    "brand": "SANTANDER",
+    "region": "MG",
+    "hour": 14,
+    "category": "GAMING",
+    "psp": "SANTANDER",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 69.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "RS",
+    "hour": 9,
+    "category": "NEWS",
+    "psp": "SANTANDER",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 810.0,
+    "method": "CREDIT_CARD",
+    "brand": "SANTANDER",
+    "region": "SP",
+    "hour": 15,
+    "category": "SPORTS",
+    "psp": "SANTANDER",
+    "status": "SUCCESS"
+  },
+  {
+    "amount": 49.9,
+    "method": "PIX",
+    "brand": null,
+    "region": "CE",
+    "hour": 16,
+    "category": "STREAMING",
+    "psp": "SANTANDER",
+    "status": "SUCCESS"
+  }
+]

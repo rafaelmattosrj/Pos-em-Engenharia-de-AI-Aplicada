@@ -18,7 +18,14 @@
     <description>PSP Routing Intelligence — IA para recomendacao de Payment Service Providers</description>
 
     <properties>
-        <java.version>21</java.version>
+        <!-- IDEIA.md original mencionava Java 21; ajustado para 17 para bater com a
+             toolchain realmente disponivel no ambiente e com os demais projetos Java
+             do modulo (embeddings-vector-search-java, pdf-rag-knowledge-base-java,
+             openrouter-multi-model-chat-java), que tambem usam Java 17. -->
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <langchain4j.version>1.12.2</langchain4j.version>
         <langchain4j.beta.version>1.12.2-beta22</langchain4j.beta.version>
     </properties>
